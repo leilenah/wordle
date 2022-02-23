@@ -1,0 +1,262 @@
+----------------------------------------------------------------
+ANALYSIS
+----------------------------------------------------------------
+Based on the data below, the letters that are the most likely to appear in a word are:
+'e' --> 10.28% chance of occurance
+'s' --> 10.27% chance of occurance
+'a' --> 9.24% chance of occurance
+'o' --> 6.84% chance of occurance
+'r' --> 6.42% chance of occurance
+
+The most common first letters of a word are (in order):
+'s'
+'c'
+'b'
+'p'
+'t'
+
+The most common second letters of a word are (in order):
+'a'
+'o'
+'e'
+'i'
+'u'
+
+The most common third letters of a word are (in order):
+'a'
+'r'
+'i'
+'o'
+'n'
+
+The most common fourth letters of a word are (in order):
+'e'
+'a'
+'t'
+'i'
+'n'
+
+The most common fifth letters of a word are (in order):
+'s'
+'e'
+'y'
+'d'
+'t'
+
+The first letter is likely to be a consonant.
+The second letter is likely to be a vowel.
+The third letter is somewhat of a toss up, but leaning more towards vowel (particularly the vowel 'a')
+The fourth letter is somewhat of a toss up as well, but leaning more towards vowel (particularly the vowel 'e')
+The fifth letter is likely to be a consonant.
+
+Good Candidates:
+roast
+sores
+(more TBD)
+
+
+----------------------------------------------------------------
+DATA
+----------------------------------------------------------------
+'Letter Occurances:'
+{'e': 6653,
+ 's': 6649,
+ 'a': 5983,
+ 'o': 4428,
+ 'r': 4154,
+ 'i': 3752,
+ 'l': 3366,
+ 't': 3292,
+ 'n': 2948,
+ 'u': 2508,
+ 'd': 2448,
+ 'y': 2066,
+ 'c': 2021,
+ 'p': 2013,
+ 'm': 1975,
+ 'h': 1754,
+ 'g': 1639,
+ 'b': 1624,
+ 'k': 1495,
+ 'f': 1112,
+ 'w': 1037,
+ 'v': 693,
+ 'z': 434,
+ 'j': 291,
+ 'x': 288,
+ 'q': 112}
+
+'Letter Occurance Percentages'
+{'e': '10.28%',
+ 's': '10.27%',
+ 'a': '9.24%',
+ 'o': '6.84%',
+ 'r': '6.42%',
+ 'i': '5.80%',
+ 'l': '5.20%',
+ 't': '5.09%',
+ 'n': '4.55%',
+ 'u': '3.87%',
+ 'd': '3.78%',
+ 'y': '3.19%',
+ 'c': '3.12%',
+ 'p': '3.11%',
+ 'm': '3.05%',
+ 'h': '2.71%',
+ 'g': '2.53%',
+ 'b': '2.51%',
+ 'k': '2.31%',
+ 'f': '1.72%',
+ 'w': '1.60%',
+ 'v': '1.07%',
+ 'z': '0.67%',
+ 'j': '0.45%',
+ 'x': '0.44%',
+ 'q': '0.17%'}
+
+'Popular First Letters'
+{'s': 1560,
+ 'c': 920,
+ 'b': 908,
+ 'p': 857,
+ 't': 815,
+ 'a': 736,
+ 'm': 693,
+ 'd': 681,
+ 'g': 637,
+ 'r': 628,
+ 'f': 595,
+ 'l': 575,
+ 'h': 488,
+ 'w': 411,
+ 'k': 375,
+ 'n': 325,
+ 'e': 303,
+ 'o': 262,
+ 'v': 242,
+ 'j': 202,
+ 'u': 189,
+ 'y': 181,
+ 'i': 165,
+ 'z': 105,
+ 'q': 78,
+ 'x': 16}
+
+'Popular Second Letters'
+{'a': 2260,
+ 'o': 2093,
+ 'e': 1626,
+ 'i': 1380,
+ 'u': 1185,
+ 'r': 940,
+ 'l': 697,
+ 'h': 544,
+ 'n': 345,
+ 'y': 267,
+ 't': 239,
+ 'p': 228,
+ 'm': 188,
+ 'c': 176,
+ 'w': 163,
+ 'k': 95,
+ 's': 93,
+ 'd': 84,
+ 'b': 81,
+ 'g': 75,
+ 'x': 57,
+ 'v': 52,
+ 'z': 29,
+ 'f': 24,
+ 'q': 15,
+ 'j': 11}
+
+'Popular Third Letters'
+{'a': 1235,
+ 'r': 1197,
+ 'i': 1047,
+ 'o': 989,
+ 'n': 962,
+ 'e': 882,
+ 'l': 848,
+ 'u': 666,
+ 't': 615,
+ 's': 531,
+ 'm': 510,
+ 'c': 392,
+ 'd': 390,
+ 'p': 363,
+ 'g': 362,
+ 'b': 334,
+ 'w': 271,
+ 'k': 268,
+ 'v': 240,
+ 'y': 213,
+ 'f': 178,
+ 'z': 142,
+ 'x': 133,
+ 'h': 120,
+ 'j': 46,
+ 'q': 13}
+
+'Popular Fourth Letters'
+{'e': 2323,
+ 'a': 1073,
+ 't': 897,
+ 'i': 880,
+ 'n': 786,
+ 'l': 771,
+
+
+
+ 'r': 716,
+ 'o': 696,
+ 's': 515,
+ 'k': 500,
+ 'd': 471,
+ 'g': 422,
+ 'p': 418,
+ 'c': 406,
+ 'm': 402,
+ 'u': 401,
+ 'b': 242,
+ 'h': 235,
+ 'f': 233,
+ 'v': 155,
+ 'w': 128,
+ 'z': 126,
+ 'y': 108,
+ 'j': 29,
+ 'x': 12,
+ 'q': 2}
+
+'Popular Fifth Letters'
+{'s': 3950,
+ 'e': 1519,
+ 'y': 1297,
+ 'd': 822,
+ 't': 726,
+ 'a': 679,
+ 'r': 673,
+ 'n': 530,
+ 'l': 475,
+ 'o': 388,
+ 'h': 367,
+ 'i': 280,
+ 'k': 257,
+ 'm': 182,
+ 'p': 147,
+ 'g': 143,
+ 'c': 127,
+ 'f': 82,
+ 'x': 70,
+ 'u': 67,
+ 'w': 64,
+ 'b': 59,
+ 'z': 32,
+ 'v': 4,
+ 'q': 4,
+ 'j': 3}
+
+ 'Most Popular Letters by Index'
+{0: 's', 1: 'a', 2: 'a', 3: 'e', 4: 's'}
+
