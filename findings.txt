@@ -1,6 +1,59 @@
 ----------------------------------------------------------------
 ANALYSIS
 ----------------------------------------------------------------
+Best First Guess:
+'saine'
+
+Solid First Guess:
+'brane'
+'crine'
+
+Other Good Guesses:
+['crise',
+ 'beany',
+ 'brant',
+ 'brise',
+ 'coaly',
+ 'paise',
+ 'saunt',
+ 'soily',
+ 'toise',
+ 'trine',
+ 'brast',
+ 'brose',
+ 'prase',
+ 'trone',
+ 'bouse',
+ 'brosy',
+ 'crost',
+ 'cruet',
+ 'cruse',
+ 'prise',
+ 'toile',
+ 'bousy',
+ 'brent',
+ 'crusy',
+ 'sault',
+ 'sient',
+ 'touse',
+ 'bialy',
+ 'biont',
+ 'peony',
+ 'prosy',
+ 'tousy',
+ 'brule',
+ 'brust',
+ 'piony',
+ 'prent',
+ 'prole',
+ 'prost',
+ 'boult',
+ 'poule',
+ 'prest',
+ 'prunt',
+ 'prial',
+ 'poult']
+
 Based on the data below, the letters that are the most likely to appear in a word are:
 'e' --> 10.28% chance of occurance
 's' --> 10.27% chance of occurance
@@ -48,11 +101,6 @@ The second letter is likely to be a vowel.
 The third letter is somewhat of a toss up, but leaning more towards vowel (particularly the vowel 'a')
 The fourth letter is somewhat of a toss up as well, but leaning more towards vowel (particularly the vowel 'e')
 The fifth letter is likely to be a consonant.
-
-Good Candidates:
-roast
-sores
-(more TBD)
 
 
 ----------------------------------------------------------------
