@@ -38,8 +38,7 @@ def get_popular_letters_by_index(word_list, i):
 
 
 def get_good_guess_list(solutions, guesses):
-    good_guesses = []
-    good_guess_points = {}
+    good_guesses = {}
     max_popular_letters = 5
     top_popular_letters_by_index = {
         0: [],
@@ -54,89 +53,43 @@ def get_good_guess_list(solutions, guesses):
         for word in solutions:
             popular_letters = get_popular_letters_by_index(solutions, i)  # returns a dict with letter counts
             popular_letters_list = list(popular_letters.keys())
-            top_popular_letters_by_index[i] = popular_letters_list[:max_popular_letters]
-
-    # determine if a word should be considered a good guess
-    for word in guesses:
-        good_guess = True
-        for i in range(len(word)):
-            ch = word[i]
-
-            # a word is not a good guess if its characters at each index aren't in top_popular_letters_by_index
-            if word[i] not in top_popular_letters_by_index[i]:
-                good_guess = False
-                break
-
-            # a word is not a good guess if it repeats any of its characters
-            if word.count(ch) > 1:
-                good_guess = False
-                break
-
-        if good_guess:
-            good_guesses.append(word)
+            top_popular_letters_by_index[i] = popular_letters_list
 
     # assign points to each guess based on letter indices
-    for word in good_guesses:
+    for word in guesses:
         points = 0
         for i in range(len(word)):
             top_popular_letters = top_popular_letters_by_index[i]
             char = word[i]
-            char_position = top_popular_letters.index(char)
-            points += char_position
-        good_guess_points[word] = points
+            if char in top_popular_letters:
+                char_position = top_popular_letters.index(char)
+                points += char_position
+            else:
+                points += 26
+        good_guesses[word] = points
 
     # the words with the least amount of points are considered the best guesses
-    sorted_good_guess_points = dict(sorted(good_guess_points.items(), key=lambda item: item[1]))
+    sorted_good_guesses = dict(sorted(good_guesses.items(), key=lambda item: item[1]))
+    good_guesses_list = list(sorted_good_guesses.keys())
 
-    return list(sorted_good_guess_points.keys())
+    print(sorted_good_guesses)
+
+    # TODO: decomp this de-dup functionality
+    final_list = []
+    for word in good_guesses_list:
+        has_double_letter = False
+        for ch in word:
+            if word.count(ch) > 1:
+                has_double_letter = True
+        if has_double_letter == False:
+            final_list.append(word)
+    return final_list[:40]  # return top 40 good first guesses
 
 
 def main():
     good_guesses = get_good_guess_list(SOLUTIONS_LIST, GUESS_LIST)
     pprint('Good First Guesses:')
     pprint(good_guesses)
-
-    letter_occurances = get_letter_occurances(SOLUTIONS_LIST)
-    pprint('Letter Occurances:')
-    pprint(letter_occurances, sort_dicts=False)
-
-    letter_percentages = get_letter_percentages(letter_occurances)
-    pprint('Letter Occurance Percentages:')
-    pprint(letter_percentages, sort_dicts=False)
-
-    popular_first_letters = get_popular_letters_by_index(SOLUTIONS_LIST, 0)
-    most_popular_first_letter = list(popular_first_letters.keys())[0]
-    pprint('Popular First Letters:')
-    pprint(popular_first_letters, sort_dicts=False)
-
-    popular_second_letters = get_popular_letters_by_index(SOLUTIONS_LIST, 1)
-    most_popular_second_letter = list(popular_second_letters.keys())[0]
-    pprint('Popular Second Letters:')
-    pprint(popular_second_letters, sort_dicts=False)
-
-    popular_third_letters = get_popular_letters_by_index(SOLUTIONS_LIST, 2)
-    most_popular_third_letter = list(popular_third_letters.keys())[0]
-    pprint('Popular Third Letters:')
-    pprint(popular_third_letters, sort_dicts=False)
-
-    popular_fourth_letters = get_popular_letters_by_index(SOLUTIONS_LIST, 3)
-    most_popular_fourth_letter = list(popular_fourth_letters.keys())[0]
-    pprint('Popular Fourth Letters:')
-    pprint(popular_fourth_letters, sort_dicts=False)
-
-    popular_fifth_letters = get_popular_letters_by_index(SOLUTIONS_LIST, 4)
-    most_popular_fifth_letter = list(popular_fifth_letters.keys())[0]
-    pprint('Popular Fifth Letters:')
-    pprint(popular_fifth_letters, sort_dicts=False)
-
-    pprint('Most Popular Letters by Index')
-    pprint({
-        0: most_popular_first_letter,
-        1: most_popular_second_letter,
-        2: most_popular_third_letter,
-        3: most_popular_fourth_letter,
-        4: most_popular_fifth_letter
-    })
 
 
 if __name__ == '__main__':
