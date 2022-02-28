@@ -38,6 +38,7 @@ def get_popular_letters_by_index(word_list, i):
 
 
 def get_good_guess_list(solutions, guesses):
+    all_words = solutions + guesses
     good_guesses = {}
     max_popular_letters = 5
     top_popular_letters_by_index = {
@@ -56,7 +57,7 @@ def get_good_guess_list(solutions, guesses):
             top_popular_letters_by_index[i] = popular_letters_list
 
     # assign points to each guess based on letter indices
-    for word in guesses:
+    for word in all_words:
         points = 0
         for i in range(len(word)):
             top_popular_letters = top_popular_letters_by_index[i]
@@ -72,18 +73,24 @@ def get_good_guess_list(solutions, guesses):
     sorted_good_guesses = dict(sorted(good_guesses.items(), key=lambda item: item[1]))
     good_guesses_list = list(sorted_good_guesses.keys())
 
-    print(sorted_good_guesses)
+
+    pprint(sorted_good_guesses['saine'])
+    pprint(sorted_good_guesses['saint'])
+    pprint(sorted_good_guesses['crane'])
+    pprint(sorted_good_guesses['salet'])
+
+    return good_guesses_list[:20]
 
     # TODO: decomp this de-dup functionality
-    final_list = []
-    for word in good_guesses_list:
-        has_double_letter = False
-        for ch in word:
-            if word.count(ch) > 1:
-                has_double_letter = True
-        if has_double_letter == False:
-            final_list.append(word)
-    return final_list[:40]  # return top 40 good first guesses
+    # final_list = []
+    # for word in good_guesses_list:
+    #     has_double_letter = False
+    #     for ch in word:
+    #         if word.count(ch) > 1:
+    #             has_double_letter = True
+    #     if has_double_letter == False:
+    #         final_list.append(word)
+    # return final_list[:40]  # return top 40 good first guesses
 
 
 def main():

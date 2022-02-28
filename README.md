@@ -9,8 +9,10 @@ Experimental algorithms to help me beat [bricker](https://github.com/bricker) at
 
 **Solid First Guess**
 ```
-'brane'
-'crine'
+'saint'
+'crane'
+'cooee'
+'sooey'
 ```
 
 Peep more findings [here](https://github.com/leilenah/wordle/blob/master/findings.txt).
